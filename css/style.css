@@ -1,0 +1,77 @@
+body{
+    font-family: Lato,sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 85vh;
+    background-color: aqua;
+}
+header>div:first-child{
+    width: 100%;
+    height: 6vh;
+    background-color: #414141;
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+}
+nav>div:first-child{
+    height: 8vh;
+}
+nav>div:first-child>div:nth-child(2)>input{
+    width: 90%;
+    height: 5vh;
+    border: none;
+    outline: none;
+}
+nav>div:first-child>div:nth-child(2)>button{
+    background-color: white;
+
+    border: none;
+}
+nav>div:first-child>div:nth-child(2){
+    height: 6vh;
+}
+
+nav .card_1{
+    width: 90%;
+    height: 7vh;
+
+}
+
+nav .card_2{
+    width: 100%;
+    
+}
+
+header .first {
+    width: 100%;
+}
+
+header .first .right{
+    width:  20%;
+}
+
+header .first .left{
+    width: 80%;
+}
+
+.img_1 button img{
+    width: 23px;
+
+}
+#icon6{
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+}
+#icon7{
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+
+

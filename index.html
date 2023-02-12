@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tinfis-Marketplace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="icon" href="https://tinfis.uz/img/logox.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class=" d-flex justify-content-between ">
+      <div class=" d-flex ms-5 align-items-center">
+        <div>
+          <img width="20" src="https://tinfis.uz/img/location.svg" alt="">
+          <span class="text-white ">Ташкент,
+            Ташкентская область</span>
+        </div>
+        <div class="ms-5">
+          <img width="20" src="https://tinfis.uz/img/24,7.svg" alt="">
+          <span class="text-white fs-5">+998 71 209 03 33</span>
+        </div>
+      </div>
+      <div class=" d-flex me-5 align-items-center">
+        <div class="me-5">
+          <a href="" class="text-white fs-6 text-decoration-none">Кабинет продавца</a>
+        </div>
+        <div class="me-5">
+          <a href="" class="text-decoration-none">
+            <img width="20" src="https://tinfis.uz/img/icons/help.svg" alt="">
+            <span class="text-white fs-6">Помощь</span></a>
+        </div>
+        <div class="me-5">
+          <a href="" class="text-decoration-none">
+            <img width="20" src="https://tinfis.uz/ru.svg" alt="">
+            <span class="text-white fs-6">RU</span></a>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="ms-5">
+          <img width="150" src="https://tinfis.uz/img/Logo.svg" alt="">
+        </div>
+        <div class="border w-50 rounded-pill d-flex align-items-center">
+          <input class="ms-3" type="text" placeholder="Search...">
+          <button class="ms-2"><img src="https://tinfis.uz/img/sm-search.svg" alt=""></button>
+        </div>
+        <div class="d-flex me-5">
+          <a href="" class="me-3"> <img width="30" src="https://tinfis.uz/img/Favorites.png" alt=""></a>
+          <a href="" class="me-3"> <img width="30" src="https://tinfis.uz/img/cart.svg" alt=""></a>
+          <button type="button" class="btn me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img width="30" src="https://tinfis.uz/img/profile.svg" alt="">
+          </button>
+          <!-- <a href="" class="me-3"> </a> -->
+        </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Telefon nomer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" onfocus="tek()" id="inp" class="form-control">
+              </div>
+              <div class="modal-footer d-flex justify-content-center ">
+                <button type="button" onclick="yoz()" id="btn" class="btn btn-warning w-25 disabled"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal1">Krish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Telefon nomer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex">
+                <input type="text" onfocus="tek()" id="inp1" class="form-control w-25">
+                <input type="text" onfocus="tek()" id="inp2" class="form-control w-25">
+                <input type="text" onfocus="tek()" id="inp3" class="form-control w-25">
+                <input type="text" onfocus="tek()" id="inp4" class="form-control w-25">
+              </div>
+              <h1 id="h1"></h1>
+              <div class="modal-footer d-flex justify-content-center ">
+                <button type="button" onclick="yoz1()" id="btn" class="btn btn-warning w-25">Tasdiqlash</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class=" d-flex align-items-center ms-4">
+            <a href="" class="">
+              <img width="20" src="https://tinfis.uz/img/catalogBlack.svg " alt="">
+              <button>Категории</button>
+            </a>
+            <div class="card_1  d-flex  ">
+              <ul class="card_2 d-flex align-items-center ms-5 justify-content-around  ">
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" class="" src="https://tinfis.uz/img/percent.svg" alt="">
+                  <li class="ms-2 text-secondary">Акции</li>
+                </a>
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" src="https://tinfis.uz/img/magazin.svg" alt="">
+                  <li class="ms-2 text-secondary">Магазины</li>
+                </a>
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" src="https://tinfis.uz/img/star.svg" alt="">
+                  <li class="ms-2 text-secondary">Бренды</li>
+                </a>
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" src="https://tinfis.uz/img/airplane.svg" alt="">
+                  <li class="ms-2 text-secondary">Авиабилеты</li>
+                </a>
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" src="https://tinfis.uz/img/food.svg" alt="">
+                  <li class="ms-2 text-secondary">Блюда</li>
+                </a>
+                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                  <img width="30" class="" src="https://tinfis.uz/img/flower.svg" alt="">
+                  <li class="ms-2 text-secondary">Цветы</li>
+                </a>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+    <div class="first bg-light d-flex  ">
+      <div class="right  card1">
+        <div class=" ">
+          <input type="file" width="100" height="100">
+        </div>
+        <div class="card2 mb-5">
+          <ul>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/user.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Учёкитная запись</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/box.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Мои заказы</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/hold.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Заказы в ожидании</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/location.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Мои адреса</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/compare.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Сравнение товаров</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/return.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Возвращенные товары</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/star.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Мои отзывы</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/star.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Мои вопросы и ответы</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none d-flex align-items-center mb-3"><img
+                src="https://tinfis.uz/img/icons/logout.svg" width="35" class="me-2" alt="">
+              <li class="text-dark">Выход</li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none">
+              <li class="text-danger">Удалить аккаунт</li>
+            </a>
+
+          </ul>
+        </div>
+      </div>
+      <div class="left ">
+        <div>
+          <h1>Мои данные </h1>
+          <p>вы можете менять свои личные данные, управлять аккаунтом и настройками безопасности в защищённым сервисе
+            TINFIZ.UZ</p>
+        </div>
+        <div>
+          <div class="div1 bg-light w-100 d-flex justify-content-between">
+            <div class="mb-3 bg-white  w-50  form-control ">
+              <div id="chil1" class="d-flex justify-content-between">
+                <label for="exampleFormControlInput1" class="form-label ">Имя</label>
+              </div>
+              <div class="d-flex  justify-content-between">
+                <input type="text" class="form-control  me-3 " id="vp1" placeholder="" readonly value="dddd">
+                <button onclick="yoz11()" class="tugma1"><i class="fa-sharp fa-solid fa-pencil "
+                    id="icon1"></i></button>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <!-- input 2 -->
+            <div class="mb-3 bg-white ms-5 w-50 form-control  ">
+              <div id="child2" class="d-flex justify-content-beteewn">
+                <label for="exampleFormControlInput1" class="form-label">Фамилия</label>
+              </div>
+              <div class="d-flex  justify-content-between">
+                <input type="text" class="form-control me-3" id="vp11" placeholder="" readonly>
+                <button onclick="yoz12()" class="tugma2"><i class="fa-sharp fa-solid fa-pencil" id="icon2"></i></button>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- input 3 -->
+
+
+            <div class="mb-3 bg-white ms-5 me-5 w-50 form-control ">
+              <div id="child3" class="d-flex juistfy-content-beteewn">
+                <label for="exampleFormControlInput1" class="form-label">Телефон</label>
+              </div>
+              <div class="d-flex  justify-content-between">
+                <input type="tel" class="form-control me-3" id="vp12" placeholder="" readonly>
+                <button onclick="yoz13()" class="tugma3"><i class="fa-sharp fa-solid fa-pencil "
+                    id="icon3"></i></button>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="div2  w-100 d-flex justify-content-between">
+            <!-- input 4 -->
+            <div class="mb-3 bg-white  w-50  form-control ">
+              <div id="child4" class="d-flex juistfy-content-beteewn">
+                <label for="exampleFormControlInput1" class="form-label">электронная почта</label>
+              </div>
+              <div class="d-flex  justify-content-between">
+                <input type="email" class="form-control me-3" id="vp2" placeholder="" readonly>
+                <button onclick="yoz14()" class="tugma4"><i class="fa-sharp fa-solid fa-pencil" id="icon4"></i></button>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- input 5 -->
+            <div class="mb-3 bg-white ms-5 w-50 form-control  ">
+              <div id="child-5" class="d-flex juistfy-content-beteewn">
+                <label for="exampleFormControlInput1" class="form-label">дата рождения</label>
+              </div>
+              <div class="d-flex  justify-content-between">
+                <input type="date" class="form-control me-3 " id="vp21" placeholder="" readonly>
+                <button onclick="yoz15()" class="tugma5"><i class="fa-sharp fa-solid fa-pencil" id="icon5"></i></button>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 bg-white ms-5 me-5 w-50 form-control ">
+              <label for="exampleFormControlInput1" class="form-label">пол</label>
+              <div class="d-flex  justify-content-between img_1">
+                <button class="ms-3" onclick="select1()" id="icon6" id="liveToastBtn"><img id="img1"
+                    src="https://tinfis.uz/img/man.png" alt=""> Мужской пол</button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+                <div id="divSpinner" class="spinner-border text-warning"
+                  style="border:7px dotted orange; display: none;" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <button class="ms-3" onclick="select2()" id="icon7"><img id="img2"
+                    src="https://tinfis.uz/img/female.png" alt=""> Женский пол</button>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+  </header>
+
+  <!-- <main class="mb-3 w-100 bg-light  d-flex">
+
+    <div class="left w-50 bg-light d-flex flex-column justify-content-center align-items-start">
+
+      <div class="d-flex  ms-5 w-100 ">
+        <a href="" class=" text-decoration-none">
+          <p class="text-muted me-3">Бытовая техника</p>
+        </a>
+        <a href="" class=" text-decoration-none">
+          <p class="text-muted me-3">Кухонный приборы</p>
+        </a>
+        <a href="" class=" text-decoration-none">
+          <p class="text-muted me-3">Техника для измельчения и смешивания</p>
+        </a>
+      </div>
+      <div>
+
+        <div class="card_1 d-flex">
+          <div class="card_1 d-flex flex-column justify-content-start align-items-center ps-3 me-3">
+            <img width="103" class="mb-2 rounded "
+              src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg"
+              alt="">
+            <img width="103" class="mb-2 rounded "
+              src="https://back.tinfis.uz/public/uploads/all/2022/09/9xju85EJO5pQxXpB8yXwP9j6twqFsV43cbcXjDDo.jpg"
+              alt="">
+            <img width="103" class="mb-2 rounded "
+              src="https://back.tinfis.uz/public/uploads/all/2022/09/zLl6IYBc39gyp3ckl8QrXpyVkzzPnaixIHrdx4l9.jpg"
+              alt="">
+          </div>
+          <img src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg"
+            alt="">
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="right p-5">
+      <h1 class="text-light-emphasis">Блендер Электрический AVL-HB-1201</h1>
+      <div class="d-flex justify-content-between">
+        <p class="text-light-emphasis"><span>0</span> отзывы</p>
+        <p class="text-light-emphasis"><span>0</span> продаж</p>
+      </div>
+      <p class="text-light-emphasis"><span class="fs-5 me-1 text-dark">цвет:</span>черный</p>
+      <img width="103" class="mb-2 rounded border border-warning"
+        src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg" alt="">
+      <p class="fs-5 text-light-emphasis">Цена: <span class="fs-1 text-warning ps-2 pe-1">949 000</span>сум</p>
+      <p class="fs-5 text-light-emphasis">Рассрочка: <span class="fs-1 text-warning ps-2 pe-1">101 226</span><span
+          class="text-body-emphasis"><span class="fs-5 text-light-emphasis">сум</span> x 12 месяцев</span></p>
+      <div class="d-flex mb-3">
+        <div class="bg-white me-3 rounded pt-2 pb-2 ps-4 pe-4 w-25 ">
+          <button class="bg-white border-0 fs-2 ps-2 text-light-emphasis">-</button>
+          <span class="bg-white fs-2 ps-2 ">1</span>
+          <button class="bg-white border-0 fs-2 pe-2 text-warning">+</button>
+        </div>
+          <button class="w-75 rounded border-0 text-white bg-danger">Добавить в корзине</button>
+      </div>
+      <div class="d-flex mb-3">
+        <p class="text-light-emphasis fs-5">Стандарт доставка: <span class="text-success fs-5">Бесплатно</span></p></p>
+      </div>
+      <div class="d-flex w-50 justify-content-between">
+        <div>
+          <p class="text-light-emphasis fs-5">Самовывоз:</p> 
+          <p class="text-light-emphasis ">Доступен</p>
+        </div>
+        <div>
+          <p class="text-light-emphasis fs-5">Стандарт:</p> 
+          <p class="text-light-emphasis ">1 - 3 дней </p>
+        </div>
+        <div>
+          <p class="text-light-emphasis fs-5">Экспресс:</p> 
+          <p class="text-light-emphasis">недоступен</p>
+        </div>
+      </div>
+      <p class="fs-5 text-light-emphasis">Возврат и обмен доступен в течении 15 дней</p>
+      <div class="d-flex align-content-center ">
+        <div class="bg-white me-3 rounded d-flex justify-content-center align-items-center me-3" >
+          <img width="89" height="90" class="pe-2 ps-2" src="https://back.tinfis.uz/public/uploads/all/CHnd2k2Z1sFU0LCNwCOG9prBw02hoDRbfQ2akpcm.jpg" alt="">
+        </div>
+        <div class="d-flex bg-white rounded justify-content-between align-items-center ps-2 pe-2 w-100">
+          <img class="border rounded" width="79" height="80" src="https://back.tinfis.uz/public/uploads/all/D3SfnCbO4yhRW83aUd7r82w5lryVYEkrTZV9cxIH.jpg" alt="">
+          <div>
+            <a href="" class="text-decoration-dark"><p class="fs-5 text-black">Tinfis</p></a>
+            <p class="text-light-emphasis">ID: 0000052</p>
+            <p class="text-light-emphasis">3544 товаров </p>
+          </div>
+          <div class="">
+            <a href="" class="text-decoration-none"><p class="fs-5 text-black">2.0/5</p></a>
+            <p class="text-light-emphasis">Oценка</p>
+          </div>
+          <div>
+            <a href="" class="text-decoration-none"><p class="fs-5 text-black">38</p></a>
+            <p class="text-light-emphasis">проданные товары</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main> -->
+
+  <footer class="bg-white ps-5 pe-5">
+    <div class="d-flex  justify-content-between align-items-center mb-5">
+
+
+      <!-- FOOTER CARD 1 -->
+      <div class="ms-3  mt-5 d-flex flex-column justify-content-center align-items-center">
+        <img src="https://tinfis.uz/img/Logo.svg" alt="" width="200">
+        <p class="mb-3 text-muted">Загрузите наше мобильное приложение</p>
+        <div class="d-flex  mb-3">
+          <img height="40" src="https://tinfis.uz/_next/image?url=%2Fimg%2Fappstore.png&w=256&q=75" alt="">
+          <img height="40" src="https://tinfis.uz/_next/image?url=%2Fimg%2Fgoogle-play.png&w=256&q=75" alt="">
+        </div>
+        <p class="mb-3 text-muted">Найдите нас в социальных сетях</p>
+        <div>
+          <ul class="d-flex ">
+            <a href="" class="list-unstyled text-decoration-none me-2"><img src="https://tinfis.uz/img/youtobe.png"
+                alt="">
+              <li></li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none me-2"><img src="https://tinfis.uz/img/insta.png"
+                alt="">
+              <li></li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none me-2"><img src="https://tinfis.uz/img/insta.png"
+                alt="">
+              <li></li>
+            </a>
+            <a href="" class="list-unstyled text-decoration-none me-2"><img src="https://tinfis.uz/img/telegram.png"
+                alt="">
+              <li></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FOOTER CARD 2-->
+      <div class="d-flex flex-column align-items-start justify-content-center">
+        <h4>Покупатели</h4>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Как сделать заказ</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Возврат товара</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Вопросы и ответы</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Достака товара</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Публичная оферта</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Возврат денег</li>
+        </a>
+        <a href="" class="list-unstyled text-decoration-none">
+          <li class="mb-1 text-muted">Оплата товара</li>
+        </a>
+        <button class="rounded-pill bg-warning border-warning">Кабинет продавца</button>
+      </div>
+
+      <!-- FOOTER CARD 3 -->
+      <div class="d-flex flex-column align-items-center justify-items-center">
+        <h4>Партнерам</h4>
+        <ul>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">Продавайте в TINFIS</li>
+          </a>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">Откройте пункт выдачи</li>
+          </a>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">Перевозчикам</li>
+          </a>
+        </ul>
+        <h4 class="">Компания</h4>
+        <ul>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">Наши контакты</li>
+          </a>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">Наши вакансии</li>
+          </a>
+          <a href="" class="list-unstyled text-decoration-none">
+            <li class="mb-1 text-muted">О платформе</li>
+          </a>
+        </ul>
+      </div>
+
+      <!-- FOOTER CARD 4 -->
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 class="fw-bold">ЕСТЬ ВОПРОСЫ?</h3>
+        <img src="https://tinfis.uz/img/footer-headphone.png" alt="">
+        <p class="text-muted">+998<span class="fs-2 text"> 99 603 66 67</span></p>
+        <img src="	https://tinfis.uz/img/footer-mail.png " alt="">
+        <p class="text-muted">info@tinfis.uzuzcard</p>
+        <div class="d-flex">
+          <img width="70" class="me-1" src="https://tinfis.uz/img/humo.png" alt="">
+          <img width="70" src="https://tinfis.uz/img/uzcard.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+    <p class="d-flex justify-content-center text-muted">© 2021 Все права защищены. Доставка по Узбекистану.</p>
+
+
+  </footer>
+
+  <script>
+
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', () => {
+        const toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+      })
+    }
+
+
+  </script>
+
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
