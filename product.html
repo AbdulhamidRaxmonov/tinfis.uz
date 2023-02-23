@@ -65,14 +65,15 @@
         </div>
         <div class="d-flex me-5">
           <a href="" class="me-3"> <img width="30" src="https://tinfis.uz/img/Favorites.png" alt=""></a>
-          <button style="border: none; background: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img width="30" src="https://tinfis.uz/img/cart.svg" alt=""> </button>
+          <button onclick="addtocard()" style="border: none; background: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img width="30" src="https://tinfis.uz/img/cart.svg" alt=""> </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasRightLabel">Karzinka</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div id="divCanvas" class="offcanvas-body">
                
+                
             </div>
           </div>
           <button type="button" class="btn me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -186,7 +187,7 @@
             <div class="card_1 d-flex">
               <div class="card_1 d-flex flex-column justify-content-start align-items-center ps-3 me-3">
                 <img id="imgOne" onmouseover="changedImg()" style="border: 1px solid orange;" width="103" class="mb-2 rounded "
-                  src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg"
+                  src="https://back.tinfis.uz/public/uploads/all/2023/02/LHAEUvYNPaybnLj3dnC3EG0rXUFFRAt6mAv0H6oi.jpg"
                   alt="">
                 <img id="imgOne1" onmouseover="changedImg1()" width="103" class="mb-2 rounded "
                   src="https://back.tinfis.uz/public/uploads/all/2022/09/9xju85EJO5pQxXpB8yXwP9j6twqFsV43cbcXjDDo.jpg"
@@ -195,7 +196,7 @@
                   src="https://back.tinfis.uz/public/uploads/all/2022/09/zLl6IYBc39gyp3ckl8QrXpyVkzzPnaixIHrdx4l9.jpg"
                   alt="">
               </div>
-              <img id="imgBasic" src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg"
+              <img id="imgBasic" src="https://back.tinfis.uz/public/uploads/all/2023/02/LHAEUvYNPaybnLj3dnC3EG0rXUFFRAt6mAv0H6oi.jpg"
                 alt="">
             </div>
     
@@ -205,15 +206,15 @@
         </div>
     
         <div class="right p-5">
-          <h1 class="text-light-emphasis">Блендер Электрический AVL-HB-1201</h1>
+          <h1 class="text-light-emphasis">Cмеситель для ванны E.C.A. NOVITA</h1>
           <div class="d-flex justify-content-between">
             <p class="text-light-emphasis"><span>0</span> отзывы</p>
             <p class="text-light-emphasis"><span>0</span> продаж</p>
           </div>
-          <p class="text-light-emphasis"><span class="fs-5 me-1 text-dark">цвет:</span>черный</p>
+          <p class="text-light-emphasis"><span class="fs-5 me-1 text-dark">цвет:</span>хром- серебристый</p>
           <img width="103" class="mb-2 rounded border border-warning"
-            src="https://back.tinfis.uz/public/uploads/all/2022/09/JKqh7Cjn5GHauf2Ic773RpDFw4tBLA7pZ4INdKH0.jpg" alt="">
-          <p class="fs-5 text-light-emphasis">Цена: <span class="fs-1 text-warning ps-2 pe-1">949 000</span>сум</p>
+            src="https://back.tinfis.uz/public/uploads/all/2023/02/LHAEUvYNPaybnLj3dnC3EG0rXUFFRAt6mAv0H6oi.jpg" alt="">
+          <p class="fs-5 text-light-emphasis">Цена: <span class="fs-1 text-warning ps-2 pe-1">1 582 700</span>сум</p>
           <p class="fs-5 text-light-emphasis">Рассрочка: <span class="fs-1 text-warning ps-2 pe-1">101 226</span><span
               class="text-body-emphasis"><span class="fs-5 text-light-emphasis">сум</span> x 12 месяцев</span></p>
           <div class="d-flex mb-3">
@@ -222,7 +223,7 @@
               <span id="span1" class="bg-white fs-2 ps-2 ">1</span>
               <button onclick="pluss()" class="bg-white border-0 fs-2 pe-2 text-warning">+</button>
             </div>
-                <button onclick="korzina()" class=" kor w-75 rounded border-0 text-white bg-danger">Добавить в корзине</button>
+                <button id="btnkar" onclick="korzina()" class=" kor w-75 rounded border-0 text-white bg-warning">Добавить в корзине</button>
           </div>
           <div class="d-flex mb-3">
             <p class="text-light-emphasis fs-5">Стандарт доставка: <span class="text-success fs-5">Бесплатно</span></p></p>

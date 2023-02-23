@@ -40,17 +40,299 @@ function pluss(){
     spanInner = span1.innerText*1; 
     spanInner += 1;
     span1.innerHTML = spanInner;
-    
-    // console.log(spanInner);
 }
+    
+    // console.log(spanInner);   
 
 // Korzina 
 function korzina(){ 
-   var  kor = localStorage.getItem('kor')
-   createElement.innerHTML
+    var span = document.getElementById('span1');
+    var btnkar = document.getElementById('btnkar');
+    
+    btnkar.classList.remove('bg-warning');
+    btnkar.style.backgroundColor = "red";
+    btnkar.innerText ="В корзине";
+    var  kor = localStorage.getItem('kor')
+    btnkar
+    var product = {
+    name:"Cмеситель для ванны E.C.A. NOVITA",
+    color:"хром- серебристый",
+    price:"1 582 700",
+    button:"-",
+    p:"1",
+    button1:"+",
+    count: span.innerText,
+    img:'https://back.tinfis.uz/public/uploads/all/2023/02/LHAEUvYNPaybnLj3dnC3EG0rXUFFRAt6mAv0H6oi.jpg'
+    
+    
+   }
+   var json = JSON.stringify(product)
+   localStorage.setItem('product', json)
+   
+
+
+}
+function addtocard(){
+    var olish = localStorage.getItem('product')
+    var divCanvas = document.getElementById('divCanvas');
+    var canvasItem = document.createElement('div')
+    var infoItem = document.createElement('div')
+    var img = document.createElement('img')
+    var h1 = document.createElement('h1')
+    var span = document.createElement('span')
+    var span1 = document.createElement('span')
+    var span2 = document.createElement('span')
+    var imgdiv = document.createElement('div')
+    var countDiv = document.createElement('div');
+    var counta = document.createElement('a');
+    var countspan = document.createElement('span');
+    var counta1 = document.createElement('a');
+    var infoObj = JSON.parse(olish)
+    var icona = document.createElement('a');
+    var iconi = document.createElement('i');
+    var check = document.createElement('button')
+    var check1 = document.createElement('span')
+
+    
+    iconi.classList.add('fa-solid');
+    iconi.classList.add('fa-trash');
+
+    icona.appendChild(iconi);
+        counta.addEventListener('click', e=>{
+            if(countspan.innerText*1 > 0)
+              {
+                var s = countspan.innerText*1;
+                s-=1;
+                countspan.innerText = s;
+              }
+        });
+    
+    counta1.addEventListener('click', e=>{
+        var s = countspan.innerText*1;
+        s+=1;
+        countspan.innerText = s;
+    });
+
+    counta.innerText  = "-";
+    countspan.innerText = "1";
+    counta1.innerText  = "+";
+    counta.style.fontSize ="18pt";
+    counta.style.fontWeight ="bold";
+    counta1.style.fontSize ="18pt";
+    counta1.style.fontWeight ="bold";
+    countspan.style.fontSize ="18pt";
+    countspan.style.fontWeight ="bold";
+
+    countDiv.style.width = "100px";
+    countDiv.style.height = "30px";
+    countDiv.style.border = "1px solid black";
+    countDiv.style.backgroundColor = "white";
+    countDiv.style.borderRadius = "5px";
+    countDiv.style.display = "inline-flex";
+    countDiv.style.justifyContent = "space-around";
+
+    
+    countDiv.appendChild(counta);
+    countDiv.appendChild(countspan);
+    countDiv.appendChild(counta1);
+
+    icona.style.float = "right";
+    icona.style.marginTop = "5px";
+    icona.style.marginRight = "5px";
+    
+    
+    icona.addEventListener('click', e=>{
+        divCanvas.removeChild(canvasItem);
+    })
+
+
+
+
+    divCanvas.style.backgroundColor = "grey";
+    canvasItem.style.width = '100%';
+    canvasItem.style.height = '25vh';
+    canvasItem.style.display ='inline-flex';
+    canvasItem.style.alignItems = "center"
+    imgdiv.style.width = "30%";
+    imgdiv.style.height = "22vh";
+    // imgdiv.style.backgroundColor = "orange";
+    imgdiv.style.display ='inline-flex';
+    imgdiv.style.alignItems = "center"
+    infoItem.style.width = "70%";
+    infoItem.style.height = "22vh";
+    // infoItem.style.backgroundColor = "crimson";
+    divCanvas.style.display = 'flex'
+    divCanvas.style.flexDirection = 'column';
+    divCanvas.style.justifyContent= 'space-between'
+    check.style.width = '100%';
+    check.style.height = '60px'
+    check.style.borderRadius = '15px'
+    
+
+    
+    canvasItem.style.backgroundColor = 'white';
+    canvasItem.style.borderRadius = "5px";
+    // canvasItem1.style.display = 'flex'
+    // canvasItem1.style.flexDirection = 'column'
+    // canvasItem1.style.justifyContent = 'center'
+    // canvasItem1.style.float = 'right' 
+   
+    h1.style.fontSize = '25px'
+    h1.style.fontFamily ='bold'
+    img.style.width = '100px'
+    img.style.float = 'left'
+    h1.innerText = infoObj.name
+    span.innerHTML = "color:" + infoObj.color + "<br>"
+    span1.innerHTML = "price:" +  infoObj.price + " sum" 
+    span2.innerHTML = "<br>" + "count:" +  infoObj.count + "<br>"
+    
+    check1.innerHTML = "oформить заказ"
+    // button.innerText = infoObj.button
+
+    img.setAttribute('src', infoObj.img)
+    imgdiv.appendChild(img);
+    infoItem.appendChild(h1);
+    infoItem.appendChild(span);
+    infoItem.appendChild(span1);
+    infoItem.appendChild(span2);
+    infoItem.appendChild(countDiv);
+    infoItem.appendChild(icona);
+
+
+    canvasItem.appendChild(imgdiv);
+    canvasItem.appendChild(infoItem);
+
+    divCanvas.appendChild(canvasItem);
+    divCanvas.appendChild(check);
+    check.appendChild(check1);
+    
+    check1.addEventListener('click', e=>{
+        window.open('checkout.html', '_self');
+    })
+
+    
+    
+   
+    
+
+ 
+}
+
+function mapclick(){
+    var InputEmail1 = document.getElementById('InputEmail1');
+    var InputPassword1 = document.getElementById('InputPassword1');
+    var InputPassword2 = document.getElementById('InputPassword2');
+    
+
+    var objMap = {
+        inp1: InputEmail1.value,
+        inp2: InputPassword1.value,
+        inp3: InputPassword2.value,
+    }
+
+    var objJson = JSON.stringify(objMap);
+    localStorage.setItem('mapObj', objJson);
+
+    window.open('checkout.html', '_self');
+    
+
+
+}
+function cardNumber(){
+    var cardInp = document.getElementById('cardInp')
+    var cardInp1 = document.getElementById('cardInp1')
+
+    var cardMap1 = {
+        inp1: cardInp.value,
+        inp2: cardInp1.value,
+        
+    }
+
+    var objJson = JSON.stringify(cardMap1);
+    localStorage.setItem('cardObj', objJson);
+
+    window.open('checkout.html', '_self');
+}
+function locList(){
+    var span1 = document.getElementById('spann1')
+    var spann12 = document.getElementById('spann12')
+    var spann13 = document.getElementById('spann13')
+    var btncard = document.getElementById('btncard');
+    var mapObj = localStorage.getItem('mapObj');
+    var parseJson = JSON.parse(mapObj);
+    var imgpro = document.getElementById('imgpro')
+    var proh5 = document.getElementById('proh5')
+    var prosp = document.getElementById('prosp')
+    var prosp1 = document.getElementById('prosp1')
+  
+  
+
+    var cardObj = localStorage.getItem('cardObj');
+    var cardJson = JSON.parse(cardObj);
+    btncard.innerText = cardJson.inp1; 
+
+    span1.innerText = parseJson.inp1; 
+    spann12.innerText = parseJson.inp2; 
+    spann13.innerText = parseJson.inp3; 
+
+    var product = localStorage.getItem('product');
+    var proo = JSON.parse(product);
+    imgpro.setAttribute('src', proo.img);
+    proh5.innerText = proo.name;
+    prosp.innerText = proo.color;
+    prosp1.innerText = proo.count;
+    console.log(proo)
+
+
+
+
+}
+// DASHBORD.HTML
+function finesh(){
+    var productName = document.getElementById('productName')
+    var adress = document.getElementById('adress')
+    var phone = document.getElementById('phone')
+    var cardName = document.getElementById('cardName')
+    var color1 = document.getElementById('color1')
+    var ism = document. getElementById('ism')
+    
+    var cardObj = localStorage.getItem('cardObj');
+    var parseJson = JSON.parse(cardObj);
+    cardName.innerText = parseJson.inp1;
+
+    var product = localStorage.getItem('product');
+    var perseJson1 = JSON.parse(product);
+    productName.innerText = perseJson1.name;
+    color1.innerText = perseJson1.color
+
+    var mapObj = localStorage.getItem('mapObj');
+    var per = JSON.parse(mapObj)
+    phone.innerText = per.inp3;
+    adress.innerText = per.inp1;
+    ism.innerText = per.inp2;
+
 
 }
 
+
+
+
+function orderProduct(){
+   window.open('dashboard.html', '_self'); 
+}
+function kaa1(){
+    var uzgar = document.getElementById('uzgar');
+    var uzgar1 = document.getElementById('uzgar1');
+    uzgar1.style.border = 'none';
+    uzgar.style.border = '2px solid orange';
+}
+
+function kaa2(){
+    var uzgar1 = document.getElementById('uzgar1');
+    var uzgar = document.getElementById('uzgar');
+    uzgar1.style.border = '2px solid orange';
+    uzgar.style.border = 'none';
+}
 
 
 function changedImg1(){

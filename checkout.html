@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tinfis-Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" href="https://tinfis.uz/img/logox.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body onload="locList()">
+
+    <header>
+        <div class=" d-flex justify-content-between ">
+            <div class=" d-flex ms-5 align-items-center">
+                <div>
+                    <img width="20" src="https://tinfis.uz/img/location.svg" alt="">
+                    <span class="text-white ">Ташкент,
+                        Ташкентская область</span>
+                </div>
+                <div class="ms-5">
+                    <img width="20" src="https://tinfis.uz/img/24,7.svg" alt="">
+                    <span class="text-white fs-5">+998 71 209 03 33</span>
+                </div>
+            </div>
+            <div class=" d-flex me-5 align-items-center">
+                <div class="me-5">
+                    <a href="" class="text-white fs-6 text-decoration-none">Кабинет продавца</a>
+                </div>
+                <div class="me-5">
+                    <a href="" class="text-decoration-none">
+                        <img width="20" src="https://tinfis.uz/img/icons/help.svg" alt="">
+                        <span class="text-white fs-6">Помощь</span></a>
+                </div>
+                <div class="me-5">
+                    <a href="" class="text-decoration-none">
+                        <img width="20" src="https://tinfis.uz/ru.svg" alt="">
+                        <span class="text-white fs-6">RU</span></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="ms-5">
+                    <img width="150" src="https://tinfis.uz/img/Logo.svg" alt="">
+                </div>
+                <div class="border w-50 rounded-pill d-flex align-items-center">
+                    <input class="ms-3" type="text" placeholder="Search...">
+                    <button class="ms-2"><img src="https://tinfis.uz/img/sm-search.svg" alt=""></button>
+                </div>
+                <div class="d-flex me-5">
+                    <a href="" class="me-3"> <img width="30" src="https://tinfis.uz/img/Favorites.png" alt=""></a>
+                    <a href="" class="me-3"> <img width="30" src="https://tinfis.uz/img/cart.svg" alt=""></a>
+                    <button type="button" class="btn me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img width="30" src="https://tinfis.uz/img/profile.svg" alt="">
+                    </button>
+                    <!-- <a href="" class="me-3"> </a> -->
+                </div>
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Telefon nomer</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" onfocus="tek()" id="inp" class="form-control">
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center ">
+                                <button type="button" onclick="yoz()" id="btn" class="btn btn-warning w-25 disabled"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal1">Krish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Telefon nomer</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body d-flex">
+                                <input type="text" onfocus="tek()" id="inp1" class="form-control w-25">
+                                <input type="text" onfocus="tek()" id="inp2" class="form-control w-25">
+                                <input type="text" onfocus="tek()" id="inp3" class="form-control w-25">
+                                <input type="text" onfocus="tek()" id="inp4" class="form-control w-25">
+                            </div>
+                            <h1 id="h1"></h1>
+                            <div class="modal-footer d-flex justify-content-center ">
+                                <button type="button" onclick="yoz1()" id="btn"
+                                    class="btn btn-warning w-25">Tasdiqlash</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class=" d-flex align-items-center ms-4">
+                        <a href="" class="">
+                            <img width="20" src="https://tinfis.uz/img/catalogBlack.svg " alt="">
+                            <button>Категории</button>
+                        </a>
+                        <div class="card_1  d-flex  ">
+                            <ul class="card_2 d-flex align-items-center ms-5 justify-content-around  ">
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" class="" src="https://tinfis.uz/img/percent.svg" alt="">
+                                    <li class="ms-2 text-secondary">Акции</li>
+                                </a>
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" src="https://tinfis.uz/img/magazin.svg" alt="">
+                                    <li class="ms-2 text-secondary">Магазины</li>
+                                </a>
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" src="https://tinfis.uz/img/star.svg" alt="">
+                                    <li class="ms-2 text-secondary">Бренды</li>
+                                </a>
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" src="https://tinfis.uz/img/airplane.svg" alt="">
+                                    <li class="ms-2 text-secondary">Авиабилеты</li>
+                                </a>
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" src="https://tinfis.uz/img/food.svg" alt="">
+                                    <li class="ms-2 text-secondary">Блюда</li>
+                                </a>
+                                <a href="" class="d-flex align-items-center list-unstyled text-decoration-none ">
+                                    <img width="30" class="" src="https://tinfis.uz/img/flower.svg" alt="">
+                                    <li class="ms-2 text-secondary">Цветы</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+    </header>
+    <main class="ms-5 bg-light mb-5">
+        <h3>Оформление заказа</h3>
+        <div class="box d-flex justify-content-between">
+
+            <div class="leftCard bg-white">
+                <div class="d-flex bg-white">
+                    <div>
+                        <img id="imgpro" width="100"
+                            src=""
+                            alt="">
+                    </div>
+                    <div class="ms-3 d-flex justify-content-between  w-100">
+                        <div>
+                            <h5 id="proh5" class="text-light-emphasis"></h5>
+                            <p class="text-light-emphasis">Цвет: <span id="prosp" class=""></span></p>
+                            <p class="text-light-emphasis">Бренд: <span class="fs-5"> Авалон</span></p>
+                            <p class="text-light-emphasis">Масса: <span class="text-success"> 1кг</span></p>
+                            <p class="text-light-emphasis">Количество: <span id="prosp1"></span></p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between align-content-around">
+                            <div class="w-100 d-flex align-items-end justify-content-end bg-white">
+                                <img width="30"
+                                    src="https://back.tinfis.uz/public/uploads/all/2022/09/TyxcqQdt6qP6DujqlvGBmFdxd5fgxpUzA9xoxmM6.jpg"
+                                    alt="">
+                                <span>Avalon</span>
+                            </div>
+                            <div>
+                                <div>
+                                    <p class="text-light-emphasis">Типы доставки:</p>
+                                    <div class="d-flex">
+                                        <button onclick="kaa1()" id="uzgar" class="bg-white rounded me-3"><i class="fa-regular fa-clock"></i>
+                                            Стандарт<p class="text-light-emphasis"> 1-2 дней <span
+                                                    class="text-success">безлатно</span></p></button>
+                                        <button onclick="kaa2()" id="uzgar1" class="bg-white rounded"><i class="fa-regular fa-clock"></i> Экспресс<p
+                                                class="text-success"> 4-8 часов <span class="text-light-emphasis">31
+                                                    000</span></p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightCard bg-white w-25">
+                <div class="rightCard me-3">
+                    <div>
+                        <p class="text-light-emphasis fs-4">Типы доставки:</p>
+                        <div class="d-flex">
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModall1" class="bg-white rounded me-3 w-50"><i class="fas fa-box"></i>
+                                    Самовывоз: 
+                             </button>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModall1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="min-width: 90% !important;">
+      <div class="modal-content" style="width: 100% !important; height: 90vh !important;">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <div class="row d-flex  justify-content-center">
+               <div class="col-xl-5" style="width: 40%; height: 80vh;">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Joy</label>
+                      <input type="text" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Ism</label>
+                      <input type="text" class="form-control" id="InputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Tel</label>
+                        <input type="text" class="form-control" id="InputPassword2">
+                    </div>
+                    <button  type="button" onclick="mapclick()" class="btn btn-warning w-50">Добавить адрес</button>
+                  </form>
+               </div>
+               <div class="col-xl-7" style="width: 60%; height: 80vh; ">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d69811.8059252717!2d35.8612992!3d56.85248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1676911673063!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+           </div>
+        </div>
+        <div class="modal-footer">
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+                            <button  class="bg-white rounded w-50 "><i class="fas fa-car"></i>
+                                Доставка: 
+                                </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-light-emphasis fs-4">Адрес доставки</p>
+                        <div style="width: 100%; height: 10vh; border: 2px solid orange; border-radius: 5px;">
+                             <span id="spann1">
+
+                             </span>
+                             <br>
+                             <span id="spann12">
+
+                             </span>
+                             <br>
+                             <span id="spann13">
+
+                             </span>
+
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d69811.8059252717!2d35.8612992!3d56.85248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1676911673063!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        </div>
+                        <p class="text-light-emphasis fs-4">Способ оплаты</p>
+                        <div style="width: 100%; height: 10vh; border: 2px solid orange; border-radius: 5px;">
+                            
+                              <button  data-bs-toggle="modal" data-bs-target="#exampleModalll1"><img src="https://tinfis.uz/img/credit-card.svg" alt=""> <span>Оплатить картой</span> <span id="btncard"></span> </button>
+                              <!-- Modal -->
+<div class="modal fade" id="exampleModalll1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+         
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img class="img-fluid" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.randelltiongson.com%2Fwp-content%2Fuploads%2F2016%2F05%2FCreditCard.png&f=1&nofb=1&ipt=2ce9cbf4809ce84419c864cf317a9649ff48070f5664a6491d1ed9c2c4837cb8&ipo=images" alt="">
+        </div>
+        <div class="modal-footer d-flex" style="width: 100%; height: 10vh; border: 2px solid orange; border-radius: 5px;">
+            <input style="margin-right: 120px;" type="text" class="form-control w-75 " id="cardInp" placeholder="0000 0000 0000">
+            <input style="margin-top: -40px; margin-left: 20px;" type="text" class="form-control w-25" id="cardInp1" placeholder="00/00">
+            <button  type="button" onclick="cardNumber()" class="btn btn-warning w-50">Применить</button>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+                           
+  <div class="modal-footer d-flex justify-content-center" style="width: 100%; height: 10vh; border: 2px solid orange; border-radius: 5px;">
+            
+    <button  type="button" onclick="orderProduct()" class="btn btn-warning w-100">Оформление заказа</button>
+</div>    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d69811.8059252717!2d35.8612992!3d56.85248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1676911673063!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="bg-white ps-5 pe-5">
+        <div class="d-flex  justify-content-between align-items-center mb-5">
+
+
+            <!-- FOOTER CARD 1 -->
+            <div class="ms-3  mt-5 d-flex flex-column justify-content-center align-items-center">
+                <img src="https://tinfis.uz/img/Logo.svg" alt="" width="200">
+                <p class="mb-3 text-muted">Загрузите наше мобильное приложение</p>
+                <div class="d-flex  mb-3">
+                    <img height="40" src="https://tinfis.uz/_next/image?url=%2Fimg%2Fappstore.png&w=256&q=75" alt="">
+                    <img height="40" src="https://tinfis.uz/_next/image?url=%2Fimg%2Fgoogle-play.png&w=256&q=75" alt="">
+                </div>
+                <p class="mb-3 text-muted">Найдите нас в социальных сетях</p>
+                <div>
+                    <ul class="d-flex ">
+                        <a href="" class="list-unstyled text-decoration-none me-2"><img
+                                src="https://tinfis.uz/img/youtobe.png" alt="">
+                            <li></li>
+                        </a>
+                        <a href="" class="list-unstyled text-decoration-none me-2"><img
+                                src="https://tinfis.uz/img/insta.png" alt="">
+                            <li></li>
+                        </a>
+                        <a href="" class="list-unstyled text-decoration-none me-2"><img
+                                src="https://tinfis.uz/img/insta.png" alt="">
+                            <li></li>
+                        </a>
+                        <a href="" class="list-unstyled text-decoration-none me-2"><img
+                                src="https://tinfis.uz/img/telegram.png" alt="">
+                            <li></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOOTER CARD 2-->
+            <div class="d-flex flex-column align-items-start justify-content-center">
+                <h4>Покупатели</h4>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Как сделать заказ</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Возврат товара</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Вопросы и ответы</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Достака товара</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Публичная оферта</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Возврат денег</li>
+                </a>
+                <a href="" class="list-unstyled text-decoration-none">
+                    <li class="mb-1 text-muted">Оплата товара</li>
+                </a>
+                <button class="rounded-pill bg-warning border-warning">Кабинет продавца</button>
+            </div>
+
+            <!-- FOOTER CARD 3 -->
+            <div class="d-flex flex-column align-items-center justify-items-center">
+                <h4>Партнерам</h4>
+                <ul>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">Продавайте в TINFIS</li>
+                    </a>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">Откройте пункт выдачи</li>
+                    </a>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">Перевозчикам</li>
+                    </a>
+                </ul>
+                <h4 class="">Компания</h4>
+                <ul>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">Наши контакты</li>
+                    </a>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">Наши вакансии</li>
+                    </a>
+                    <a href="" class="list-unstyled text-decoration-none">
+                        <li class="mb-1 text-muted">О платформе</li>
+                    </a>
+                </ul>
+            </div>
+
+            <!-- FOOTER CARD 4 -->
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h3 class="fw-bold">ЕСТЬ ВОПРОСЫ?</h3>
+                <img src="https://tinfis.uz/img/footer-headphone.png" alt="">
+                <p class="text-muted">+998<span class="fs-2 text"> 99 603 66 67</span></p>
+                <img src="	https://tinfis.uz/img/footer-mail.png " alt="">
+                <p class="text-muted">info@tinfis.uzuzcard</p>
+                <div class="d-flex">
+                    <img width="70" class="me-1" src="https://tinfis.uz/img/humo.png" alt="">
+                    <img width="70" src="https://tinfis.uz/img/uzcard.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <p class="d-flex justify-content-center text-muted">© 2021 Все права защищены. Доставка по Узбекистану.</p>
+
+
+    </footer>
+
+    <script>
+
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+
+
+    </script>
+
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
