@@ -267,14 +267,6 @@ function locList(){
   
   
 
-//     var cardObj = localStorage.getItem('cardObj');
-//     var cardJson = JSON.parse(cardObj);
-//     btncard.innerText = cardJson.inp1; 
-
-//     span1.innerText = parseJson.inp1; 
-//     spann12.innerText = parseJson.inp2; 
-//     spann13.innerText = parseJson.inp3; 
-
     var product = localStorage.getItem('product');
     var proo = JSON.parse(product);
     imgpro.setAttribute('src', proo.img);
